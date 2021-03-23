@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="wgiG7Au7CleAI0k2ZBMBti3T2QmEnJkxwl4JE0x_PeM" />
+    <meta name="google-signin-client_id" content="287564293735-a5rcj9fl1afak91llnj7cfh4vibq3e9c.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
     <title>Paper Bot</title>
@@ -43,9 +48,19 @@
             </svg>
             <p class="leading-relaxed text-lg"> Login with google</p>
 
-            <div>
+            <div class="g-signin2" data-onsuccess="onSignIn">
 
             </div>
+
+            <script>
+              function onSignIn(googleUser) {
+                  var profile = googleUser.getBasicProfile();
+                  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                  console.log('Name: ' + profile.getName());
+                  console.log('Image URL: ' + profile.getImageUrl());
+                  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                }
+            </script>
 
 
 
