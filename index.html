@@ -18,6 +18,19 @@
             </svg>
             <a href="./index.html" style="color:#c2f0fc; font-size: 1.7em; font-weight: 700;margin-left: 1rem;">Paper Bot</a>
           </a>
+          <script>
+            if (auth2.isSignedIn.get()) {
+                  var profile = auth2.currentUser.get().getBasicProfile();
+
+                  var Uname = function() {
+                    var element = document.querySelector('#content')
+                    element = profile.getName();
+                    return element;
+                  }
+                  
+                  document.getElementById("name").innerHTML = Uname();
+                }
+          </script>
           <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <a href="./components/jee.html" class="transform hover:scale-110 motion-reduce:transform-none mr-5 hover:text-purple-400">JEE</a>
             <a href="./components/neet.html" class="transform hover:scale-110 motion-reduce:transform-none mr-5 hover:text-purple-400">NEET</a>
@@ -25,7 +38,7 @@
             <a href="./components/studyMaterial.html" class="transform hover:scale-110 motion-reduce:transform-none mr-5 hover:text-purple-400">Study Material</a>
             <a href="./components/AboutUS.html" class="transform hover:scale-110 motion-reduce:transform-none mr-5 hover:text-purple-400">About Us</a>
           </nav>
-          <button class="transform hover:scale-110 motion-reduce:transform-none inline-flex items-center text-white bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0"><a href="./components/login.html">Login</a>
+          <button class="transform hover:scale-110 motion-reduce:transform-none inline-flex items-center text-white bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0"><a id="Uname" href="./components/login.html"></a>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:none; --darkreader-inline-stroke:currentColor;">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
