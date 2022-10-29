@@ -5,10 +5,10 @@
 }
 
 .paperboat{
-    color:#0e3742;
-    letter-spacing:2px;
+    color:#1d4857;
+    letter-spacing:3px;
     padding-top: 0px;
-    padding-left: 50px;
+    padding-left: 55px;  
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,6 @@
     justify-content: space-around;
     
 }
-
 .paperboat1{
     -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
     font-size:40px;
